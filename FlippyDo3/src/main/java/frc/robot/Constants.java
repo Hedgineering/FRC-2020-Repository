@@ -19,7 +19,7 @@ package frc.robot;
  */
 public final class Constants {
 //PWM Values
-public static final int FLYWHEEL_SPARK_ID = 1;
+public static final int FLYWHEEL_SPARK_ID = 1; //FIXED, PWM port was wrong b4
 public static final int SPINNER_SPARK_ID = 8;
 public static final int BELT_SPARK_ID = 0;
 public static int LEFT_ELEV_ID = 3;
