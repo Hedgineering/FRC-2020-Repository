@@ -20,7 +20,7 @@ package frc.robot;
 public final class Constants {
 //PWM Values
 public static final int FLYWHEEL_SPARK_ID = 1; //FIXED, PWM port was wrong b4
-public static final int SPINNER_SPARK_ID = 8;
+public static final int SPINNER_SPARK_ID = 2;
 public static final int BELT_SPARK_ID = 0;
 public static int LEFT_ELEV_ID = 3;
 public static int RIGHT_ELEV_ID = 2;
@@ -62,6 +62,8 @@ public static final int SHOOT_ANGLE_END_BUTTON = 2; //x button
 
     //Elevator
     public static final int ELEVATOR_AXIS = 5; // Right Analog Y
+    public static final double UP_SPEED = 0.5;
+    public static final double DOWN_SPEED = -0.5;
 
 
 //Buttons

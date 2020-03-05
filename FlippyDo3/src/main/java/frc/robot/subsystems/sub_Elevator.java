@@ -31,7 +31,13 @@ public class sub_Elevator extends SubsystemBase {
     // This method will be called once per scheduler run
   }
   public void setSpeed (double speed){
-    leftElevatorMotor.set(ControlMode.PercentOutput, -speed);
-    rightElevatorMotor.set(ControlMode.PercentOutput, speed);
+    if(speed > Constants.UP_SPEED){
+      speed = Constants.UP_SPEED;
+    }
+    else if(speed < Constants.DOWN_SPEED){
+      speed = Constants.DOWN_SPEED;
+    }
+    leftElevatorMotor.set(ControlMode.PercentOutput, speed);
+    rightElevatorMotor.set(ControlMode.PercentOutput, -speed);
   }
 }

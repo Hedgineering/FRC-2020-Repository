@@ -96,7 +96,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
-    RobotContainer.getShooter().setShooterSpeed(RobotContainer.getXbox().getRawAxis(Constants.SHOOTER_AXIS));
+    //RobotContainer.getShooter().setShooterSpeed(RobotContainer.getXbox().getRawAxis(Constants.SHOOTER_AXIS));
   }
 
   @Override

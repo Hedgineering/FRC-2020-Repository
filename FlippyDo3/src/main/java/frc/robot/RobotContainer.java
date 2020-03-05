@@ -15,7 +15,10 @@ import frc.robot.commands.cmd_ArcadeDrive;
 import frc.robot.commands.cmd_Elevator;
 import frc.robot.commands.cmd_Intake;
 import frc.robot.commands.cmd_Shooter;
+import frc.robot.commands.cmd_SpinControlRight;
+import frc.robot.commands.cmd_SpinControlStop;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.sub_ControlPanelSpinner;
 import frc.robot.subsystems.sub_Drivetrain;
 import frc.robot.subsystems.sub_Elevator;
 import frc.robot.subsystems.sub_Intake;
@@ -37,6 +40,7 @@ public class RobotContainer {
   private final sub_Elevator elevator = new sub_Elevator();
   private static final sub_Shooter shooter = new sub_Shooter();
   private final sub_Intake intake = new sub_Intake();
+  private final sub_ControlPanelSpinner spinner = new sub_ControlPanelSpinner();
 
   //Commands
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
@@ -53,6 +57,7 @@ public class RobotContainer {
   //Buttons
   private final static JoystickButton shootAngleStartButton = new JoystickButton(stick, Constants.SHOOT_ANGLE_START_BUTTON);
   private final static JoystickButton shootAngleEndButton = new JoystickButton(stick, Constants.SHOOT_ANGLE_END_BUTTON);
+  private final static JoystickButton spinRightButton = new JoystickButton(stick, Constants.SPIN_RIGHT);
 
 
   /**
@@ -70,6 +75,7 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    spinRightButton.whenPressed(new cmd_SpinControlRight(spinner));
   }
 
 
