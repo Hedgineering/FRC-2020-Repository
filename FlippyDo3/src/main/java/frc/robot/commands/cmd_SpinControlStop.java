@@ -30,13 +30,13 @@ public class cmd_SpinControlStop extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    spinControlSub.setSpinnerSpeed(0);
+    spinControlSub.setSpinnerSpeed(0); //Make timeout
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    spinControlSub.setSpinnerSpeed(0);
+    //spinControlSub.setSpinnerSpeed(0);
   }
 
   // Returns true when the command should end.
